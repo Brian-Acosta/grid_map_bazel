@@ -1,8 +1,5 @@
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+# Bazel
+bazel-*
 
 # Precompiled Headers
 *.gch
@@ -32,6 +29,9 @@
 .project
 .settings
 *.pydevproject
+
+# JetBrains
+.idea
 
 # OS X
 .DS_Store
