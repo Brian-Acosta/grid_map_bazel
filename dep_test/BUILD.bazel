@@ -1,7 +1,0 @@
-package(default_visibility = ["//visibility:public"])
-
-cc_binary(
-    name = "pcl_include_test",
-    srcs = ["pcl_include_test.cc"],
-    deps = ["@pcl//:common"],
-)

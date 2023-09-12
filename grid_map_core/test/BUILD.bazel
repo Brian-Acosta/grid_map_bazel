@@ -1,0 +1,44 @@
+package(default_visibility = ["//visibility:public"])
+
+cc_library(
+    name = "grid_map_tests",
+    srcs = [
+        "CubicConvolutionInterpolationTest.cpp",
+        "CubicInterpolationTest.cpp",
+        "EllipseIteratorTest.cpp",
+        "GridMapIteratorTest.cpp",
+        "GridMapMathTest.cpp",
+        "GridMapTest.cpp",
+        "LineIteratorTest.cpp",
+        "PolygonIteratorTest.cpp",
+        "PolygonTest.cpp",
+        "SlidingWindowIteratorTest.cpp",
+        "SpiralIteratorTest.cpp",
+        "SubmapIteratorTest.cpp",
+    ],
+    deps = [
+        ":test_helpers",
+        "//grid_map_core",
+        "@gtest//:gtest"
+    ],
+)
+
+cc_library(
+    name = "test_helpers",
+    srcs = ["test_helpers.cpp"],
+    hdrs = ["test_helpers.hpp"],
+    deps = [
+        "//grid_map_core",
+        "@gtest//:gtest"
+    ],
+)
+
+cc_test(
+    name = "test_grid_map_core",
+    srcs = ["test_grid_map_core.cpp"],
+    deps = [
+        ":grid_map_tests",
+        "//grid_map_core",
+        "@gtest//:gtest"
+    ],
+)
