@@ -1,4 +1,9 @@
-# Grid Map
+# Grid Map (Bazel)
+This is a wrapper around the original grid_map package designed to allow use with the Bazel build system and without ROS as a dependency. Because of this, ROS specific features will not be supported. 
+
+## Progress
+So fare the following modules have been converted to bazel
+- grid_map_core
 
 ## Overview
 
