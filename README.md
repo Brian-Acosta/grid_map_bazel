@@ -1,4 +1,31 @@
-# Grid Map
+# Grid Map (Bazel)
+This is a re-skin of the original grid_map library to use the Bazel build system and remove ROS as a dependency. As such, any ROS specific modules won't be supported. So far, the following modules are supported:
+- grid_map_core
+
+To include this package in your own bazel project, add the following to your WORKSPACE file:
+```build
+http_archive(
+    name = "grid_map",
+    sha256 = "0"*64, #Replce this with the correct SHA when you build 
+    strip_prefix = "grid_map_bazel-main",
+    url = "https://github.com/Brian-Acosta/grid_map_bazel/archive/main.tar.gz",
+)
+```
+
+BUILD file example:
+
+```build
+cc_library(
+    name = "example_lib",
+    srcs = ["example_lib.cc"],
+    hdrs = ["example_lib.h"],
+    deps = [
+        "@grid_map//grid_map_core",
+    ],
+)
+```
+
+# Original Grid Map README:
 
 ## Overview
 
