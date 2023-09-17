@@ -9,6 +9,9 @@
 // Eigen
 #pragma once
 
+#define EIGEN_FUNCTORS_PLUGIN "grid_map_core/eigen_plugins/FunctorsPlugin.hpp"
+#define EIGEN_DENSEBASE_PLUGIN "grid_map_core/eigen_plugins/DenseBasePlugin.hpp"
+
 #include <Eigen/Core>
 
 namespace grid_map {

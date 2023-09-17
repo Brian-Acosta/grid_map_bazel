@@ -1,20 +1,18 @@
 package(default_visibility = ["//visibility:public"])
 
-
 cc_library(
     name = "test_helpers",
     srcs = ["test_helpers.cpp"],
     hdrs = ["test_helpers.hpp"],
     deps = [
         "//grid_map_core",
-        "@gtest//:gtest"
+        "@gtest",
     ],
 )
 
 cc_test(
     name = "test_grid_map_core",
     srcs = [
-        "test_grid_map_core.cpp",
         "CubicConvolutionInterpolationTest.cpp",
         "CubicInterpolationTest.cpp",
         "EllipseIteratorTest.cpp",
@@ -27,10 +25,11 @@ cc_test(
         "SlidingWindowIteratorTest.cpp",
         "SpiralIteratorTest.cpp",
         "SubmapIteratorTest.cpp",
+        "test_grid_map_core.cpp",
     ],
     deps = [
         ":test_helpers",
         "//grid_map_core",
-        "@gtest//:gtest"
+        "@gtest",
     ],
 )
