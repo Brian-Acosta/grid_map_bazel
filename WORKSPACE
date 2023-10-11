@@ -1,8 +1,8 @@
 workspace(name = "grid_map")
 
-load("//tools/workspace:default.bzl", "add_default_repositories")
+load("//tools/workspace:deps.bzl", "add_grid_map_dependencies")
 
-add_default_repositories()
+add_grid_map_dependencies()
 
 load("@rules_pcl//bzl:repositories.bzl", "pcl_repositories")
 
