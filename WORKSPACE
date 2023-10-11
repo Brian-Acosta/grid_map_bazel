@@ -6,7 +6,7 @@ add_default_repositories()
 
 load("@rules_pcl//bzl:repositories.bzl", "pcl_repositories")
 
-pcl_repositories()
+pcl_repositories(excludes="gtest")
 
 load("//tools/workspace/pcl:setup.bzl", "setup_pcl")
 
