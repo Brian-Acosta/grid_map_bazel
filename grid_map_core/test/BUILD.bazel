@@ -6,7 +6,7 @@ cc_library(
     hdrs = ["test_helpers.hpp"],
     deps = [
         "//grid_map_core",
-        "@gtest",
+        "@gtest_internal//:gtest",
     ],
 )
 
@@ -30,6 +30,6 @@ cc_test(
     deps = [
         ":test_helpers",
         "//grid_map_core",
-        "@gtest",
+        "@gtest_internal//:gtest",
     ],
 )
