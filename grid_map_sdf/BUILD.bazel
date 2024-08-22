@@ -1,0 +1,17 @@
+package(default_visibility = ["//visibility:public"])
+
+cc_library(
+    name = "grid_map_sdf",
+    srcs = glob([
+        "src/*.cpp",
+    ]),
+    hdrs = glob([
+        "include/**/*.h",
+        "include/**/*.hpp",
+    ]),
+    strip_include_prefix = "include",
+    deps = [
+        "@eigen",
+        "//grid_map_core"
+    ],
+)
