@@ -1,0 +1,16 @@
+package(default_visibility = ["//visibility:public"])
+
+cc_library(
+    name = "grid_map_pcl",
+    srcs = glob([
+        "src/GridMapPclConverter.cpp",
+    ]),
+    hdrs = glob([
+        "include/grid_map_pcl/GridMapPclConverter.hpp",
+    ]),
+    strip_include_prefix = "include",
+    deps = [
+        "//grid_map_core",
+        "@pcl//:common"
+    ],
+)

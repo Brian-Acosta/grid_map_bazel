@@ -5,7 +5,7 @@ def rules_pcl_repository():
     maybe(
         http_archive,
         name = "rules_pcl",
-        sha256 = "82a2f30fa083f6f844db39b9d246eea8b8847c8d1c9b8905623f8dfabea805e2",
+        sha256 = "fe3af3c4d59591f123cd56bd96b1839ef5d48d3b36ce23003d172e76c2f6616e",
         strip_prefix = "rules_pcl-main",
         url = "https://github.com/Brian-Acosta/rules_pcl/archive/main.tar.gz",
     )
